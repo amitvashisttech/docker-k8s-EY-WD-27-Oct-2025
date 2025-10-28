@@ -1,9 +1,9 @@
 ```
   302  cd v2/
   303  ls
-  304  vim Dockerfile
+  304  cat Dockerfile
   305  ls
-  306  vim info.html
+  306  cat info.html
   307  ls
   308  docker build -t myapache:v2 .
   309  docker images

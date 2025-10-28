@@ -2,7 +2,7 @@
  275  cat Dockerfile
   276  docker run -it --name test-web ubuntu:noble
   277  ls
-  278  vim Dockerfile
+  278  cat Dockerfile
   279  ls
   280  docker build -t myapache:v1 .
   281  docker images
