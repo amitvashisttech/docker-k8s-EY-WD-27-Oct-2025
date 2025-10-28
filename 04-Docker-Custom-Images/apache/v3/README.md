@@ -1,13 +1,17 @@
 ```
- 275  cat Dockerfile
-  276  docker run -it --name test-web ubuntu:noble
-  277  ls
-  278  vim Dockerfile
-  279  ls
-  280  docker build -t myapache:v1 .
-  281  docker images
-  282  docker run -d --name test-apache-1 myapache:v1
-  283  docker ps
-  284  docker inspect test-apache-1
-  285  curl 172.17.0.2
+  319  cd v3/
+  320  ls
+  323  cat info.html
+  324  ls
+  325  docker build -t myapache:v3 .
+  326  ls
+  327  docker build -t myapache:v3 -f MyDockerfile .
+  328  docker images
+  329  docker run -d --name test-apache-3 myapache:v3
+  330  curl 172.17.0.3
+  331  curl 172.17.0.4
+  332  ls
+  333  docker ps
+  334  curl 172.17.0.4 -v
+
 ```
