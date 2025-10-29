@@ -53,7 +53,11 @@ Here's a quick look at some Docker commands related to networking and custom ima
 #### 1. Run an Ubuntu container and install network tools:
 ```
 docker run -it ubuntu
+```
+```
 apt-get update
+```
+```
 apt-get install net-tools iputils-ping -y
 ```
 
