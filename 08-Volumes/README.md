@@ -10,7 +10,6 @@
   646  docker volume ls
   647  docker volume inspect myvol1
   648  ls -ltr /var/lib/docker/volumes/myvol1/_data
-  649  docker run -it stg-1 -v myvol1:/myapp ubuntu
   650  docker run -it --name stg-1 -v myvol1:/myapp ubuntu
   651  ls
   652  ls -ltr /var/lib/docker/volumes/myvol1/_data
