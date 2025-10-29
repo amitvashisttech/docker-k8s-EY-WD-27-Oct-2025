@@ -1,0 +1,56 @@
+```  
+  533  docker network ls
+  534  docker network inspect none
+  535  docker network inspect host
+  536  docker network ls
+  537  docker network inspect bridge
+  538  ifconfig
+  539  curl 172.17.0.3
+  540  route -n
+  541  ls
+  542  docker run -it --name network-1 ubuntu
+  543  docker ps
+  544  docker commit -m "My Second Image" -p deda020b84b3 mynetwork-ubuntu:v1
+  545  docker ps
+  546  docker images
+  547  ls
+  548  docker kill $(docker ps -q)
+  549  docker network ls
+  550  docker run -itd --name network-default-1 --network bridge mynetwork-ubuntu:v1
+  551  docker run -itd --name network-default-2 --network host mynetwork-ubuntu:v1
+  552  docker run -itd --name network-default-3 --network none mynetwork-ubuntu:v1
+  553  docker ps
+  554  docker rename network-default-3 network-none-3
+  555  docker ps
+  556  docker rename network-default-2 network-host-2
+  557  docker ps
+  558  docker exec -it network-default-1 ifconfig
+  559  docker exec -it network-default-1 route -n
+  560  docker exec -it network-host-2 ifconfig
+  561  docker exec -it network-host-2 route -n
+  562  route -n
+  563  docker exec -it network-none-1 ifconfig
+  564  docker exec -it network-none-3 ifconfig
+  565  docker exec -it network-none-3 route -n
+  566  docker network ls
+  567  docker network create --help
+  568  docker network create --driver bridge --subnet 172.28.5.0/24 --gateway 172.28.5.1 mybr0
+  569  docker network ls
+  570  docker network inspect mybr0
+  571  ifconfig
+  572  docker ps
+  573  docker run -itd --name mybr-nw-1 --network mybr0 mynetwork-ubuntu:v1
+  574  docker run -itd --name mybr-nw-2 --network mybr0 mynetwork-ubuntu:v1
+  575  docker exec -it mybr-nw-1 ifconfig
+  576  docker exec -it mybr-nw-2 ifconfig
+  577  docker exec -it mybr-nw-2 ping -c2 172.28.5.2
+  578  docker exec -it mybr-nw-1 ping -c2 172.28.5.3
+  579  ls
+  580  docker ps
+  581  docker network ls
+  582  docker kill $(docker ps -q)
+  583  docker rm $(docker ps -q)
+  584  docker rm $(docker ps -qa)
+  585  docker network ls
+  586  docker network rm ddc76bb23bbc
+```
