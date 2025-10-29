@@ -48,23 +48,13 @@ Here's a quick look at some Docker commands related to networking and custom ima
 ```
     docker network inspect 7daccc782664
 ```
-### Running Containers with Published Ports
-#### 1. Run a container with a specific port published:
-  
-```
-docker run -d --name job2 -p 8080:80 myapache:v4
-```
-#### 2. Test connectivity to a container:
-```
-    curl 10.4.0.178:8080
-```
 ### Creating a Custom Image with Network Utilities
 
 #### 1. Run an Ubuntu container and install network tools:
 ```
 docker run -it ubuntu
 apt-get update
-apt-get install net-tools -y
+apt-get install net-tools iputils-ping -y
 ```
 
 #### 2. Exit the container (detach without stopping):
