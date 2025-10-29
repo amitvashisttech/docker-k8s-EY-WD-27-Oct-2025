@@ -54,3 +54,11 @@
   705  docker volume rm $(docker volume ls -q)
   706  docker volume ls
 ```
+
+## Static Dir Mapping
+```
+  728  docker run -it --name stg-dir-map-1 -v /root/new:/myvol1 ubuntu
+  729  docker run -it --name stg-dir-map-2 -v /root/new:/myvol1:ro ubuntu
+  730  docker ps
+  731  docker exec -it stg-dir-map-1 bash
+```
