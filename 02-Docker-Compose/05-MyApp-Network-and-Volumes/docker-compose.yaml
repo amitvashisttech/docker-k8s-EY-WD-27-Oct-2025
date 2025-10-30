@@ -1,0 +1,48 @@
+services: 
+  proxy:
+    image: nginx:latest
+    ports:
+      - '8084:80'
+    networks:
+      - mynet
+    volumes: 
+      - myproxy-app-vol1:/myvol1 
+      - myproxy-app-vol2:/myvol2 
+
+
+        
+  myapp:
+    image: amitvashist7/docker-k8s-ey-wd-27-oct-2025-myapache:v4
+    ports:
+      - '8085:80' 
+    networks:
+      - mynet
+    volumes: 
+      - myapp-app-vol1:/myvol1 
+      - myapp-app-vol2:/myvol2 
+
+
+
+  db:
+    image: nginx:latest
+    ports:
+      - '3306:80' 
+    networks:
+      - mysecurenet
+    volumes: 
+      - mydb-app-vol1:/myvol1 
+
+
+volumes:
+  mydb-app-vol1:
+  myapp-app-vol1:
+  myapp-app-vol2:
+  myproxy-app-vol1:
+  myproxy-app-vol2:
+
+
+networks:
+  mynet:
+    driver: bridge  
+  mysecurenet:
+    driver: bridge  
