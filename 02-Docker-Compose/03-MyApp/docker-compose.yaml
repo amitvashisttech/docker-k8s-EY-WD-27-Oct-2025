@@ -1,0 +1,17 @@
+services: 
+  proxy:
+    image: nginx:latest
+    ports:
+      - '8084:80' 
+
+
+        
+  myapp:
+    image: amitvashist7/docker-k8s-ey-wd-27-oct-2025-myapache:v4
+    ports:
+      - '8085:80' 
+
+
+
+  db:
+    image: nginx:latest

@@ -16,3 +16,14 @@
   790  docker-compose stop
   791  docker-compose rm
 ```
+
+```
+  867  docker-compose up -d
+  868  docker-compose ps
+  869  docker-compose ls
+  870  docker-compose exec web1 ls
+  871  docker-compose logs
+  872  docker-compose events
+  873  docker-compose --help
+  874  docker-compose images
+```
