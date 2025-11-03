@@ -7,7 +7,7 @@ root@ubuntugui:~ # kubectl apply -f helloworld-rc.yaml
 
 ## Genrate a Service YAML
 ```
-root@ubuntugui:~ # kubectl expose rc helloworld-controller --type=ClusterIP --dry-run  -o yaml > helloworld-svc.yaml
+root@ubuntugui:~ # kubectl expose rc helloworld-controller --type=ClusterIP 
 W1206 11:55:47.848190   20983 helpers.go:704] --dry-run is deprecated and can be replaced with --dry-run=client.
 ```
 ```
